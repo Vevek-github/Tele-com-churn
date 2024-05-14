@@ -1,0 +1,21 @@
+|--@Author : Vevek -Data Scientist
+|-- data
+|    |---source_data.csv
+|
+|-- models
+|    |---model.pkl used 
+| 
+|
+|-- docker 
+|
+|-- images 
+|    |---images used 
+|    
+|
+|-- packages 
+|    |---__init__.py 
+|    |---data_preprocessor.py 
+|    |---model_trainer.ipynb
+|
+|
+|--requirments.txt
