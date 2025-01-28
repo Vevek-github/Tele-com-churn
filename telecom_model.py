@@ -28,7 +28,7 @@ def input_run(dff:pd.DataFrame):
   
   # Load the models and encoders using pickle
 
-  best_gb = joblib.load(r"Models\best_gb_telecom")
+  best_gb = joblib.load("Models/best_gb_telecom")
   simple_scaler  = joblib.load(r"Encoders\simple_scaler")
   mean_encoder = joblib.load(r"Encoders\mean_encoder_model")
   enc = joblib.load(r"Encoders\ohe_area_code")
