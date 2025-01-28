@@ -16,6 +16,7 @@ from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
 from sklearn.tree import plot_tree
 from sklearn.metrics import accuracy_score, f1_score
+import sklearn.ensemble
 import pickle
 import joblib
 
