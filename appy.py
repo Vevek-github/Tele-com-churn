@@ -23,7 +23,7 @@ with tab1:
     if file:
         df =pd.read_csv(file,index_col=None)
         st.dataframe(df)
-        df.to_csv(r"C:\Users\vevek\OneDrive\Desktop\Python\Tele-com churn\current_data_batch_csv.csv",index=None)
+        df.to_csv(r"current_data_batch_csv.csv",index=None)
 
 
 
@@ -61,15 +61,15 @@ with tab2:
     st.write("## User Input Data")
     df_user = pd.DataFrame(user_data, index=[0])
     st.write(df_user)
-    df_user.to_csv(r"C:\Users\vevek\OneDrive\Desktop\Python\Tele-com churn\current_data.csv")
+    df_user.to_csv(r"current_data.csv")
 
 
 
 
 with tab3:
     st.subheader("Choose CSV or Element wise Prediction")
-    df_user = pd.read_csv(r"C:\Users\vevek\OneDrive\Desktop\Python\Tele-com churn\current_data.csv",index_col=None)
-    df= pd.read_csv(r"C:\Users\vevek\OneDrive\Desktop\Python\Tele-com churn\current_data_batch_csv.csv",index_col=None)
+    df_user = pd.read_csv(r"current_data.csv",index_col=None)
+    df= pd.read_csv(r"current_data_batch_csv.csv",index_col=None)
     Batch_vs_element =st.radio("CSV or Element",["CSV","Element"])
     if Batch_vs_element == "CSV":
         df=df.copy()
@@ -86,14 +86,14 @@ with tab3:
         
         col1 ,col2 = st.columns(2)
         col1=st.write(hd)
-        col2 = st.image("Tele-com churn\Model_comparision.png")
+        col2 = st.image("Model_comparision.png")
         
         
     Model_importances = st.button("Feature Importances of the Model")
     if Model_importances:
         col4 ,col3 = st.columns(2)
-        col3 = st.image(r"Tele-com churn\x_train_corr.png")
-        col4 = st.image(r"Tele-com churn\fearture_importance_gbm.png")
+        col3 = st.image(r"x_train_corr.png")
+        col4 = st.image(r"fearture_importance_gbm.png")
         
 
         
