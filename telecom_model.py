@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+
 #to ignore warnings
 import warnings
 warnings.filterwarnings('ignore')
@@ -16,6 +17,7 @@ from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
 from sklearn.tree import plot_tree
 from sklearn.metrics import accuracy_score, f1_score
+from xgboost import XGBClassifier
 
 import pickle
 import joblib
@@ -29,10 +31,10 @@ def input_run(dff:pd.DataFrame):
   
   # Load the models and encoders using pickle
 
-  best_gb = joblib.load("Models/best_gb_telecom")
-  simple_scaler  = joblib.load(r"Encoders\simple_scaler")
-  mean_encoder = joblib.load(r"Encoders\mean_encoder_model")
-  enc = joblib.load(r"Encoders\ohe_area_code")
+  best_xgb = joblib.load("Models/best_xgb_telecom")
+  simple_scaler  = joblib.load("Encoders/simple_scaler")
+  mean_encoder = joblib.load("Encoders/mean_encoder_model")
+  enc = joblib.load("Encoders/ohe_area_code")
 
   #sample_size =20
   # index_set for merge
@@ -94,5 +96,5 @@ def input_run(dff:pd.DataFrame):
   df = df[feature_names]      
 
   # load the gbm 
-  return best_gb.predict(df)
+  return best_xgb.predict(df)
 
