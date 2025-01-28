@@ -28,10 +28,10 @@ def input_run(dff:pd.DataFrame):
   
   # Load the models and encoders using pickle
 
-  best_gb = joblib.load(r"C:\Users\vevek\OneDrive\Desktop\Python\Tele-com churn\Models\best_gb_telecom")
-  simple_scaler  = joblib.load(r"C:\Users\vevek\OneDrive\Desktop\Python\Tele-com churn\Encoders\simple_scaler")
-  mean_encoder = joblib.load(r"C:\Users\vevek\OneDrive\Desktop\Python\Tele-com churn\Encoders\mean_encoder_model")
-  enc = joblib.load(r"C:\Users\vevek\OneDrive\Desktop\Python\Tele-com churn\Encoders\ohe_area_code")
+  best_gb = joblib.load(r"Models\best_gb_telecom")
+  simple_scaler  = joblib.load(r"Encoders\simple_scaler")
+  mean_encoder = joblib.load(r"Encoders\mean_encoder_model")
+  enc = joblib.load(r"Encoders\ohe_area_code")
 
   #sample_size =20
   # index_set for merge
