@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import telecom_model
 
 with st.sidebar:
-    st.image(r"C:\Users\vevek\OneDrive\Desktop\Python\Tele-com churn\social-network-connection-avatar-icon-vector.jpg")
+    st.image(r"social-network-connection-avatar-icon-vector.jpg")
     st.title("Customer Churn Predictor")
     st.info("This is an awesome web app , helps to understand the Customer churn analysis in the Tele-com Industry.")
     #choice = st.radio("Navigation",["Upload as Batch","Upload as Element","Result"])
