@@ -86,14 +86,14 @@ with tab3:
         
         col1 ,col2 = st.columns(2)
         col1=st.write(hd)
-        col2 = st.image("Model_comparision.png")
+        col2 = st.image("EDA images/Model_comparision.png")
         
         
     Model_importances = st.button("Feature Importances of the Model")
     if Model_importances:
         col4 ,col3 = st.columns(2)
-        col3 = st.image(r"x_train_corr.png")
-        col4 = st.image(r"fearture_importance_gbm.png")
+        col3 = st.image(r"EDA images/corr_x_train.png")
+        col4 = st.image(r"EDA images/fearture_importance_gbm.png")
         
 
         
